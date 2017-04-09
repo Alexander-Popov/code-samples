@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox minHeight="850" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nstu.geo.presentation.controller.tab.TraceLineChartController">
+
+   <children>
+      <Pane style="-fx-padding: 5px">
+         <children>
+            <Label layoutX="14.0" layoutY="9.0" text="Трассы (№):" />
+            <TextField fx:id="rangeInput" layoutX="97.0" layoutY="4.0" maxHeight="25.0" maxWidth="100" />
+            <Label layoutX="218.0" layoutY="9.0" text="Точки:" />
+            <Label layoutX="273.0" layoutY="9.0" prefHeight="15.0" prefWidth="17.0" text="с" />
+            <TextField id="pointFromInput" fx:id="pointFromInput" layoutX="284.0" layoutY="4.0" maxWidth="100" prefHeight="25.0" prefWidth="53.0" />
+            <Label layoutX="355.0" layoutY="9.0" text="до" />
+            <TextField id="pointToInput" fx:id="pointToInput" layoutX="374.0" layoutY="4.0" maxWidth="100" prefHeight="25.0" prefWidth="53.0"  />
+            <Button fx:id="submit" layoutX="512.0" layoutY="4.0" mnemonicParsing="false" onAction="#showCustomAction" text="Применить" />
+         </children>
+      </Pane>
+      <ScrollPane fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" layoutY="10" minHeight="700">
+         <content>
+            <LineChart id="lineChart" fx:id="lineChart" animated="true" createSymbols="false" minHeight="700" title="Сейсмотрассы" xAxis="Единицы дескритизации" yAxis="">
+               <xAxis>
+                  <NumberAxis autoRanging="false" label="Единицы дескритизации" side="BOTTOM" fx:id="xAxis" />
+               </xAxis>
+               <yAxis>
+                  <NumberAxis label="" side="LEFT" />
+               </yAxis>
+            </LineChart>
+         </content>
+      </ScrollPane>
+   </children>
+</VBox>

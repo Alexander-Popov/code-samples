@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox id="vbox" xmlns:fx="http://javafx.com/fxml" fx:controller="nstu.geo.presentation.controller.MenuController" >
+    <MenuBar fx:id="menuBar" id="menuBar" focusTraversable="true">
+        <menus>
+            <Menu text="Файл">
+                <items>
+                    <MenuItem text="Открыть" onAction="#chooseFileAction"/>
+                    <SeparatorMenuItem  />
+                    <MenuItem text="Выйти" onAction="#exitAction"/>
+                </items>
+            </Menu>
+        </menus>
+    </MenuBar>
+</VBox>
